@@ -1,0 +1,93 @@
+
+
+To access data, first select a station from the map or from the scrolled list. Station metadata will appear in the "Metadata & Menu Options" window. Metadata includes the station's name and ID, latitude, longitude, and elevations. The metadata also shows the period of record and variables for which a station has reported.
+
+Once you've selected a station, fill out the form below the metadata. Select if you want daily, monthly, or annual values (monthly and annual values are averaged for temperatures and summed for precipitation and snowfall). Select the desired time period, which variables you want to view, and click "Get Data". Your data will display in the "Data Output" window. Temperatures are in °F and precipitation/snowfall are in inches.
+
+
+
+Source:  http://ccc.atmos.colostate.edu/readme.html
+
+
+File Format
+==== ======
+Data Records
+==== =======
+
+Each record is a series of comma delimted fields representing one months
+data for one type of data (INFO records are an exception).
+
+Here's a description of the data types:
+
+Type Description Units
+==== ========== =====
+TMAX Maximum Temperature Degrees F.
+TMIN Minimum Temperature Degrees F.
+PRCP Precipitation 0.01 inches
+SNOW Snowfall 0.1 inches
+SNDP Snow depth on the ground inches
+INFO Station information (see below)
+
+All data records have this format:
+
+Field Description
+===== ===========
+0 Station number
+1 Year
+2 Month
+3 Type (see type list below)
+4-ndays Values; each value consists of an integer and/or
+one or more alphabetic flags (see flag list below).
+
+Codes
+=====
+m - missing
+t - trace
+a - accumulated period
+h - hail (Ft Collins only).
+
+INFO Records
+==== =======
+
+INFO records contain:
+
+Field Description
+===== ===========
+0 Station number
+1 Beginning Year
+2 End Year
+3 Type (INFO)
+4 Latitude (ddmm, dd=degrees, mm=minutes)
+5 Longitude (dddmm)
+6 Elevation (feet)
+7 Station name
+
+
+source:  https://climate.colostate.edu/cgi-bin/monthlydata.pl
+
+
+Select Parameters
+ Monthly mean minimum temperature.
+ Monthly mean maximum temperature.
+ Monthly mean temperature.
+ Total monthly precipitation.
+ Total monthly snowfall.
+ Number of days with >= 0.1 inches precipitation.
+ Number of days with >= 0.5 inches precipitation.
+ Number of days with >= 1.0 inches precipitation.
+ Number of days with snowdepth >= 1 inches.
+ Number of days with min. temp. <= 0 deg.F.
+ Number of days with min. temp. <= 32 deg.F.
+ Number of days with max. temp. >= 90 deg.F.
+ Number of days with max. temp. <= 32 deg.F.
+ Extreme max. daily precip. and day of occurence.
+ Extreme min. temp. and day of occurence.
+ Extreme max. temp. and day of occurence.
+ Monthly heating degree days, 65 deg.F base.
+ Monthly cooling degree days, 65 deg.F base.
+ Maximum snowdepth and day of occurence.
+Select Output Process
+ List in raw format
+ Formatted list only
+ Summary only
+ Both summary and list
